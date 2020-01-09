@@ -5,18 +5,18 @@ import org.slf4j.LoggerFactory;
 
 import javax.annotation.PostConstruct;
 
-public class FeatureLoader {
+public class FeatureToggleLoader {
 
-    private static Logger log = LoggerFactory.getLogger(FeatureLoader.class);
+    private static Logger log = LoggerFactory.getLogger(FeatureToggleLoader.class);
 
     private final FeatureToggleConfig featureToggleConfig;
 
-    public FeatureLoader(FeatureToggleConfig togglesConfig) {
+    public FeatureToggleLoader(FeatureToggleConfig togglesConfig) {
         this.featureToggleConfig = togglesConfig;
     }
 
     @PostConstruct
-    public void initializeToggles() {
+    void initializeToggles() {
         this.featureToggleConfig.getToggles().forEach(this::initializeToggle);
     }
 
@@ -24,9 +24,9 @@ public class FeatureLoader {
         try {
             Feature feature = Feature.valueOf(config.getName());
             feature.setEnabled(config.isEnabled());
-            log.info("FEATURE TOGGLE {} enabled: {}", feature.toString(), feature.isEnabled());
+            log.info("FEATURE TOGGLE \"{}\" enabled: {}", feature.toString(), feature.isEnabled());
         } catch (IllegalArgumentException ex) {
-            log.warn("FEATURE TOGGLE: No feature found with name {}", config.getName());
+            log.warn("Unexpected toggle configuration: No feature found with name \"{}\"", config.getName());
         }
     }
 }

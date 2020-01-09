@@ -7,18 +7,18 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class FeatureBeanConfiguration {
+public class FeatureToggleBeanConfig {
 
     private FeatureToggleConfig featureToggleConfig;
 
-    public FeatureBeanConfiguration(FeatureToggleConfig featureToggleConfig) {
+    FeatureToggleBeanConfig(FeatureToggleConfig featureToggleConfig) {
         this.featureToggleConfig = featureToggleConfig;
     }
 
     //Making sure FeatureLoader bean is initialized before any conditional beans are loaded
     @Bean
-    FeatureLoader featureLoader() {
-        return new FeatureLoader(this.featureToggleConfig);
+    FeatureToggleLoader featureLoader() {
+        return new FeatureToggleLoader(this.featureToggleConfig);
     }
 
     //Load in Calculator bean based on toggle
