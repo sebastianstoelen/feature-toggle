@@ -15,11 +15,8 @@ public enum Feature {
         return this.enabled;
     }
 
-    public void enable() {
-        this.enabled = true;
+    void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 
-    public void disable() {
-        this.enabled = false;
-    }
 }

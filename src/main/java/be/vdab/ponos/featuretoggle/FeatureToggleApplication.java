@@ -1,11 +1,15 @@
 package be.vdab.ponos.featuretoggle;
 
+import be.vdab.ponos.featuretoggle.toggle.ToggleConfigurationObject;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.ComponentScan;
+
 
 @SpringBootApplication
 @ComponentScan(basePackages = "be.vdab.ponos")
+@EnableConfigurationProperties(ToggleConfigurationObject.class)
 public class FeatureToggleApplication {
 
 	public static void main(String[] args) {

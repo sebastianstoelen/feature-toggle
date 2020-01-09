@@ -7,12 +7,18 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class FeatureConfig {
+public class FeatureConfiguration {
 
-    //Making sure FeatureLoader bean is initialized and features are set
+    private ToggleConfigurationObject toggleConfigurationObject;
+
+    public FeatureConfiguration(ToggleConfigurationObject toggleConfigurationObject) {
+        this.toggleConfigurationObject = toggleConfigurationObject;
+    }
+
+    //Making sure FeatureLoader bean is initialized before any conditional beans are loaded
     @Bean
     FeatureLoader featureLoader() {
-        return new FeatureLoader();
+        return new FeatureLoader(this.toggleConfigurationObject);
     }
 
     //Load in Calculater bean based on toggle
