@@ -7,11 +7,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class FeatureConfiguration {
+public class FeatureBeanConfiguration {
 
     private FeatureToggleConfig featureToggleConfig;
 
-    public FeatureConfiguration(FeatureToggleConfig featureToggleConfig) {
+    public FeatureBeanConfiguration(FeatureToggleConfig featureToggleConfig) {
         this.featureToggleConfig = featureToggleConfig;
     }
 
@@ -21,7 +21,7 @@ public class FeatureConfiguration {
         return new FeatureLoader(this.featureToggleConfig);
     }
 
-    //Load in Calculater bean based on toggle
+    //Load in Calculator bean based on toggle
     @Bean
     Calculator calculator() {
         if (Feature.CALCULATOR_V2.isEnabled()) {
