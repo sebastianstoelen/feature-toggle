@@ -2,13 +2,11 @@ package be.vdab.ponos.featuretoggle.toggle;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
-@ConfigurationProperties(prefix = "feature-toggles")
 @Configuration
+@ConfigurationProperties(prefix = "feature-toggles")
 public class FeatureToggleConfig {
 
     private List<Toggle> toggles;
