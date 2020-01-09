@@ -1,0 +1,7 @@
+toggle:
+  messages:
+    axon:
+      enabled: true
+  calculator:
+    version2:
+      enabled: false
