@@ -9,19 +9,19 @@ import java.util.List;
 @Component
 @ConfigurationProperties(prefix = "feature-toggles")
 @Configuration
-public class ToggleConfigurationObject {
+public class FeatureToggleConfig {
 
-    private List<FeatureToggleConfig> toggles;
+    private List<Toggle> toggles;
 
-    public void setToggles(List<FeatureToggleConfig> toggles) {
+    public List<Toggle> getToggles() {
+        return toggles;
+    }
+
+    public void setToggles(List<Toggle> toggles) {
         this.toggles = toggles;
     }
 
-    public List<FeatureToggleConfig> getAllFeatureToggles() {
-        return this.toggles;
-    }
-
-    public static class FeatureToggleConfig {
+    public static class Toggle {
         private String name;
         private boolean enabled;
 

@@ -1,2 +1,11 @@
 feature-toggles:
-  test: "hallo"
+  toggles:
+    -
+      name: "deze_feature_bestaat_niet"
+      enabled: true
+    -
+      name: "SEND_MESSAGES_OVER_AXON"
+      enabled: true
+    -
+      name: "CALCULATOR_V2"
+      enabled: false
