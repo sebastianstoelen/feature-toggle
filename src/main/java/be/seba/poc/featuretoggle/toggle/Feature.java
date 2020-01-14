@@ -1,4 +1,4 @@
-package be.vdab.ponos.featuretoggle.toggle;
+package be.seba.poc.featuretoggle.toggle;
 
 public enum Feature {
 

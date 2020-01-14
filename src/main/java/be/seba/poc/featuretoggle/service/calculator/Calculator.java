@@ -1,4 +1,4 @@
-package be.vdab.ponos.featuretoggle.service.calculator;
+package be.seba.poc.featuretoggle.service.calculator;
 
 public interface Calculator {
 

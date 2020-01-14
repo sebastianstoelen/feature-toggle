@@ -1,8 +1,8 @@
-package be.vdab.ponos.featuretoggle.toggle;
+package be.seba.poc.featuretoggle.toggle;
 
-import be.vdab.ponos.featuretoggle.service.calculator.Calculator;
-import be.vdab.ponos.featuretoggle.service.calculator.NewCalculator;
-import be.vdab.ponos.featuretoggle.service.calculator.OldCalculator;
+import be.seba.poc.featuretoggle.service.calculator.Calculator;
+import be.seba.poc.featuretoggle.service.calculator.NewCalculator;
+import be.seba.poc.featuretoggle.service.calculator.OldCalculator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

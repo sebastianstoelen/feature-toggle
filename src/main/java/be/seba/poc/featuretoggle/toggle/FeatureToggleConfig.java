@@ -1,4 +1,4 @@
-package be.vdab.ponos.featuretoggle.toggle;
+package be.seba.poc.featuretoggle.toggle;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

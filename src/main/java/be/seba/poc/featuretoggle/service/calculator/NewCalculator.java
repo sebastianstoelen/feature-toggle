@@ -1,4 +1,4 @@
-package be.vdab.ponos.featuretoggle.service.calculator;
+package be.seba.poc.featuretoggle.service.calculator;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

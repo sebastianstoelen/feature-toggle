@@ -1,6 +1,6 @@
-package be.vdab.ponos.featuretoggle.service;
+package be.seba.poc.featuretoggle.service;
 
-import be.vdab.ponos.featuretoggle.toggle.Feature;
+import be.seba.poc.featuretoggle.toggle.Feature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
